@@ -1,5 +1,8 @@
 # First Plugins
 
+> [!TIP]
+> If you end up liking this tutorial, consider leaving a ⭐ star on this repository, it means a lot!
+
 An easy to understand tutorial to create plugins for Roblox Studio.
 
 This tutorial includes **step-by-step guides**, **code examples**, and **example plugins** so you can make your first plugin effortlessly and learn along the way!
@@ -22,5 +25,4 @@ Look at [plugin examples](example-plugins/navigate.md)
 
 ---
 
-Created my [meflamey](https://www.github.com/flameydev)
-Consider leaving a ⭐ on this repo if you found this helpful!
+Created by [meflamey](https://www.github.com/flameydev)
