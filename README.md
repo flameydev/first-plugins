@@ -14,7 +14,7 @@ Check out the [beginner guide](https://www.github.com/flameydev/first-plugins/bl
 
 ---
 
-### Useful Links:
+## Useful Links
 
 [Official Documentation for Plugins](https://create.roblox.com/docs/reference/engine/classes/Plugin)
 
