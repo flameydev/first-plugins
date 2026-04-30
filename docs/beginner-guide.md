@@ -59,6 +59,9 @@ local button = toolbar:CreateButton("MyPlugin",
 	"My First Plugin!")
 ```
 
+> [!TIP]
+> You can add multiple buttons to the same toolbar! Just make sure to reference each one seperately.
+
 ### 1.4 Button Functionality
 
 The button we created in 1.3 behaves somewhat similar to GUI Buttons, like TextButton or ImageButton.
