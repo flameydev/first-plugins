@@ -42,11 +42,10 @@ You can call the `buttonId` anything, make sure it is not used by other plugins.
 
 The `tooltip` can again be anything, it'll show up when hovering over the button.
 
-`iconname` is the rbxassetid used to display an icon for the button. If you do not have an icon, add an empty string `""` instead. Add it like this:
+`iconname` is the rbxassetid used to display an icon for the button. Type it as: `"rbxassetid://YOUR_ID_HERE"`.
 
-```luau
-"rbxassetid://YOUR_ID_HERE"
-```
+> [!IMPORTANT]
+> Even if you don't add an image, just pass an empty string. Passing `nil` or another type will result in an error.
 
 `text` is the string displayed when the image is not provided.
 
