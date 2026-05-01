@@ -1,4 +1,8 @@
-# First Plugins
+<p align="center">
+<img src="assets/other/fp banner.png" width = 100% alt = "Banner">
+<br>
+First Plugins
+</p>
 
 > [!TIP]
 > If you end up liking this tutorial, consider leaving a ⭐ star on this repository, it means a lot!
