@@ -1,5 +1,7 @@
 <p align="center">
-<h4>First Plugins</h4>
+<font size=20>
+First Plugins
+</font>
 </p>
 
 > [!TIP]
