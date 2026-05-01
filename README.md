@@ -1,7 +1,5 @@
 <p align="center">
-<img src="assets/other/fp banner.png" width = 100% alt = "Banner">
-<br>
-First Plugins
+<h1> First Plugins </h1>
 </p>
 
 > [!TIP]
