@@ -194,4 +194,6 @@ end)
 
 Congrats! You've just made another plugin! You can easily expand on this as much as you want.
 
+---
+
 ## 3. Widgets
