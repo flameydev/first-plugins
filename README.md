@@ -1,13 +1,11 @@
-<p align="center">
-<font size=100>
-First Plugins
-</font>
-</p>
+# First Plugins
 
 > [!TIP]
 > If you end up liking this tutorial, consider leaving a ⭐ star on this repository, it means a lot!
 
 An easy to understand tutorial to create plugins for Roblox Studio.
+
+**Quick Start**: [Beginner Guide](docs/beginner-guide.md)
 
 This tutorial includes **step-by-step guides**, **code examples**, and **example plugins** so you can make your first plugin effortlessly and learn along the way!
 
