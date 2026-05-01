@@ -91,9 +91,107 @@ Everytime we update the Plugin, we can simply save the plugin again to view the 
 
 There are 2 basic services used by almost all Plugins, being **SelectionService** (or just Selection), and **ChangeHistoryService**.
 
-
 ### 2.1 Selection
+
 Selection, like all other services, can be required by using:
+
 ```luau
 game:GetService("Selection")
 ```
+
+`Selection` allows us to get an array containing all instances that are currently selected by the user. This is useful if we want to make a plugin that, for example, changes the shape of all selected BaseParts, or a plugin that converts the parts to the Stud material.
+
+We can use the method below to get an array with the user's selected instances:
+
+```luau
+local instances = Selection:Get()
+```
+
+Some other events and functions for `Selection` include:
+
+```luau
+Selection:Set(array)
+```
+
+This highlights the given instances inside the game, basically selecting those instances.
+
+```luau
+Selection.SelectionChanged
+```
+
+An event that fires whenever the selection for the user changes. If the user selects more instances or unselects instances, it'll fire.
+
+> [!TIP]
+> When using `Selection` in your plugins, make sure to update the selection with `Selection:Get()` every time the selection changes with `Selection.SelectionChanged`.
+
+### 2.2 ChangeHistoryService
+
+Ever made a mistake at something? Like a script, or a build? You would probably do `Ctrl + Z` to undo it. This is possible with `ChangeHistoryService`.
+
+ChangeHistoryService allows `Ctrl + Z` Undo and `Ctrl + Y` Redo functions. Start by requiring this Service:
+
+```luau
+local ChangeHistoryService = game:GetService("ChangeHistoryService")
+```
+
+Now, every time we make a change, we can use the function below to add a Waypoint to it, allowing Undo and Redo.
+
+```luau
+ChangeHistoryService:SetWaypoint("Write Anything Here")
+```
+
+Replace `'Write Anything Here"` with whatever you want. Make sure it is consistent across the block or thread.
+
+> [!IMPORTANT]
+> Call `ChangeHistoryService:SetWaypoint()` once before executing anything and once after the execution is completed. This way the undos actually work.
+
+### 2.3 Practice Plugin
+
+Now that we know how Selection and ChangeHistoryService works, let's make a plugin out of it!
+We will make a basic plugin to paint selected parts Red, and include Undos and Redos.
+
+Start by setting up the basics from [chapter 1](#1-basic-setup-), and then follow the steps below:
+
+1. Reference `Selection` and `ChangeHistoryService` in your script.
+
+```luau
+local Selection = game:GetService("Selection")
+local ChangeHistoryService = game:GetService("ChangeHistoryService")
+```
+
+2. Make it so clicking the button gets the currently selected parts and sets a waypoint
+
+```luau
+button.Click:Connect(function()
+	ChangeHistoryService:SetWaypoint("Paint") -- Set the waypoint before doing anything
+	
+	local selected = Selection:Get() -- Get the currently selected instances
+	...
+```
+
+3. Loop through the array of parts and colour the BaseParts red:
+
+```luau
+...
+for i, part in ipairs(selected) do -- Loop through all the selected instances
+		if part:IsA("BasePart") then
+			part.Color = Color3.new(1, 0, 0) -- If part is actually a BasePart, change its colour to Red
+		end
+	end
+	...
+```
+
+4. Finally, set a last waypoint. Make sure it has the same ID as the first one.
+
+```luau
+...
+	ChangeHistoryService:SetWaypoint("Paint") -- Set Waypoint again
+end)
+```
+
+> [!TIP]
+> This plugin is available in [Example Plugins](../example-plugins/navigate.md)! Check it out!
+
+Congrats! You've just made another plugin! You can easily expand on this as much as you want.
+
+Consider taking a break before we go into Chapter 3.
