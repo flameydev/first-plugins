@@ -1,12 +1,12 @@
 -- Create the Toolbar
-local toolbar = plugin:CreateToolbar("MyPlugin")
+local toolbar = plugin:CreateToolbar("UI Demo")
 
 -- Create the Toolbar Button
 local toolbarButton = toolbar:CreateButton(
-	"MyPlugin", -- Plugin Button ID
-	"My Plugin Tooltip!", -- Plugin Tooltip
-	"rbxassetid://15523194938", -- Plugin Icon
-	"My First Plugin!" -- Plugin Text
+	"Interface", -- Plugin Button ID
+	"UI Tooltip!", -- Plugin Tooltip
+	"", -- Plugin Icon
+	"UI Demo" -- Plugin Text
 )
 
 -- Define the Widget's behavior and size
@@ -22,7 +22,7 @@ local widgetInfo = DockWidgetPluginGuiInfo.new(
 
 -- Create the Widget
 local widget = plugin:CreateDockWidgetPluginGui(
-	"MyPluginWidget", -- Unique ID for the widget
+	"UIDemo", -- Unique ID for the widget
 	widgetInfo
 )
 widget.Title = "My Plugin UI" -- Title displayed at the top of the widget window
