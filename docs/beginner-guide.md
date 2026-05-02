@@ -1,7 +1,13 @@
 # Beginner Plugin Creation Guide
 
+> ## Contents
+> [Chapter 1: Basic Setup](#1-basic-setup-)
+> [Chapter 2: Selection and ChangeHistoryService](#2-selection-and-changehistoryservice-)
+> [Chapter 3: Widgets](#3-widgets)
+> [Chapter 4: Exercises](#4-exercises)
+
 This guide will walk you through with everything you need to know to create your first plugin!
-Follow the steps below, to make your first ever plugin:
+Follow the steps below, to make your first ever plugin.
 
 **Don't know what Plugins are?**
 
@@ -89,7 +95,7 @@ Everytime we update the Plugin, we can simply save the plugin again to view the 
 
 ---
 
-## 2. Usage of Selection and ChangeHistoryService:-
+## 2. Selection and ChangeHistoryService:-
 
 There are 2 basic services used by almost all Plugins, being **SelectionService** (or just Selection), and **ChangeHistoryService**.
 
