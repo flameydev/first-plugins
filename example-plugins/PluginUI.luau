@@ -21,10 +21,7 @@ local widgetInfo = DockWidgetPluginGuiInfo.new(
 )
 
 -- Create the Widget
-local widget = plugin:CreateDockWidgetPluginGui(
-	"UIDemo", -- Unique ID for the widget
-	widgetInfo
-)
+local widget = plugin:CreateDockWidgetPluginGuiAsync("WidgetUI", widgetInfo)
 widget.Title = "My Plugin UI" -- Title displayed at the top of the widget window
 
 -- Create the UI Button inside the Widget

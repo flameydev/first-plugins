@@ -16,6 +16,7 @@ We will start by first setting up the basics for our plugin.
 Add a Folder inside ServerStorage and name it whatever you want your plugin to be named. Here, we use `MyPlugin`
 <p align="right">
 <img src="../assets/naming.png" width = 60% alt = "Naming the folder">
+Name the Folder
 </p>
 
 ### 1.2 Script Creation
@@ -24,6 +25,7 @@ Add a Server Script (script) inside the Folder, name it something like `Plugin`.
 
 <p align="right">
 <img src="../assets/addscript.png" width = 50% alt = "Adding the script">
+Adding the script
 </p>
 
 ### 1.3 Adding the Toolbar and Button
@@ -193,7 +195,106 @@ end)
 > This plugin is available in [Example Plugins](../example-plugins/navigate.md)! Check it out!
 
 Congrats! You've just made another plugin! You can easily expand on this as much as you want.
+Now we head into **Chapter 3**, which is where you can really start making some advanced plugins.
+
+## 3. Widgets
+
+Widgets act like UI Containers, but for Plugins, in the same way as BillboardGui, ScreenGui, and SurfaceGui do.
+
+### 3.1 DockWidgetPluginGuiInfo
+
+Widgets require something called `DockWidgetPluginGuiInfo`, which defines how the widget acts.
+It can be created by using:
+
+```luau
+DockWidgetPluginGuiInfo.new()
+```
+
+It takes the following parameters:
+
+```luau
+DockWidgetPluginGuiInfo.new(
+    Enum.InitialDockState.Float, -- Defines where the widget will dock to, or float.
+    true, -- Initially enabled
+    false, -- Don't override the previous enabled state
+    200, -- Default width of the widget
+    200, -- Default height of the widget
+    150, -- Minimum width of the widget
+    150 -- Minimum height of the widget
+)
+```
+
+This function returns a DockWidget info to be used by plugins. We can now use this to create the Widget.
+
+We use the method below to create the widget:
+
+```luau
+local widget = plugin:CreateDockWidgetPluginGuiAsync()
+```
+
+It takes in an ID for the Widget along with the DockWidgetPluginGuiInfo we created earlier. We can also reference this and add a title for the Widget, which would make it look like a window.
+
+```luau
+local widget = plugin:CreateDockWidgetPluginGuiAsync("WidgetUI", widgetInfo)
+widget.Title = "An Example Widget GUI" -- Title displayed at the top of the widget window
+```
+
+### 3.2 Adding GUI
+
+As mentioned before, Widgets act like UI Containers. We can add any bits of UI to them and it'll show up inside the Widget.
+
+It is reccomended to have ScreenGuis inside the Folder for the plugin or inside the Plugin script itself
+
+<p align="right">
+<img src="../assets/addgui.png" width=60%>
+Adding the ScreenGui in the Folder
+</p>
+
+> [!IMPORTANT]
+> Make sure you pass actual GUI elements, and not the ScreenGui itself.
+--
+> [!TIP]
+> Add a frame that covers the whole screen and add other UI elements inside the frame. The frame can act like the GUI element!
+
+You can also create the GUI elements directly from the script, which is the practice in [PluginUI.luau](../example-plugins/PluginUI.luau) example plugin.
+
+The UI appears like this in the Widgets:
+
+<p align="center">
+<img src="../assets/examplewidget.png" width=100%>
+A Plugin's Dock Widget UI in the Float state
+
+### 3.3 Accessing the elements
+
+In many cases, we might add a button or some other elements inside the Widget that we want to reference and use later in our script. We have a few options to do so.
+
+**Option 1.**: We can reference the elements before creating the Widget. This eliminates all issues, as it references the actual ObjectValue for the Instance.
+
+**Option 2.**: We can also reference the elements AFTER creating the Widget. This is possible because the Widget is basically a ScreenGui, so we can reference them as we would an instance from the ScreenGui.
+
+## 4. Exercises
+
+Congratulations! That's all for the beginner guide, and you can start making plugins!
+
+Below is a list of some plugins you can make to practice. Keep in mind there is no correct answer for these plugins, just try to make them work.
+
+**1. Auto Anchor Plugin**: Make a Plugin that when clicked, anchors all BaseParts that are currently selected. You will need to use Buttons for this
+
+**2. Cleaner**: A system to delete select group of instances from a selected instance. For example, delete all decals from the part, delete all scripts from the model. You will need to use Widgets for this.
+
+**3. AutoTagger**: Automatically tag selected objects with a set Tag on clicking a GUI Button. You will need to use Widgets as well as CollectionService for this.
+
+> [!IMPORTANT]
+> Extra challenge: Try to display UI on the screen without the help of Widgets, can you do it?
 
 ---
 
-## 3. Widgets
+Thanks for reading through the beginner tutorial!
+
+Please consider ⭐ starring this repository, it helps out a lot!
+
+---
+
+Having problems? [Open an Issue](https://github.com/flameydev/first-plugins/issues/new)
+
+Want to contribute to the project? [Open a PR Request](https://github.com/flameydev/first-plugins/compare)
