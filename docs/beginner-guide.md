@@ -2,8 +2,11 @@
 
 > ## Contents
 > [Chapter 1: Basic Setup](#1-basic-setup-)
+> 
 > [Chapter 2: Selection and ChangeHistoryService](#2-selection-and-changehistoryservice-)
+> 
 > [Chapter 3: Widgets](#3-widgets)
+> 
 > [Chapter 4: Exercises](#4-exercises)
 
 This guide will walk you through with everything you need to know to create your first plugin!
