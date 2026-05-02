@@ -3,6 +3,9 @@
 > [!TIP]
 > If you end up liking this tutorial, consider leaving a ⭐ star on this repository, it means a lot!
 
+> [!WARNING]
+> This tutorial assumes that you already know some basic and advanced scripting concepts, they will not be explained.
+
 An easy to understand tutorial to create plugins for Roblox Studio.
 
 **Quick Start**: [Beginner Guide](docs/beginner-guide.md)
