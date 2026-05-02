@@ -261,7 +261,7 @@ Adding the ScreenGui in the Folder
 
 > [!IMPORTANT]
 > Make sure you pass actual GUI elements, and not the ScreenGui itself.
---
+
 > [!TIP]
 > Add a frame that covers the whole screen and add other UI elements inside the frame. The frame can act like the GUI element!
 
