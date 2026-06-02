@@ -27,6 +27,7 @@ Look at [plugin examples](example-plugins/navigate.md)
 ## Useful Links
 
 [Official Documentation for Plugins](https://create.roblox.com/docs/reference/engine/classes/Plugin)
+[Video Tutorial Playlist](https://youtube.com/playlist?list=PL-aFaMbMqU_dz91rpRzCamakQLtyCKCu4&si=rtyQnDgbOH-Ie2xM)
 
 ---
 
